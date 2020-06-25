@@ -120,9 +120,9 @@ function generateWizardSpell(){
 }
 
 // //#region NOTE "If" logic for the inputs in simple english
-//If player input lightning, and wizard input circle, then run win and win LbC description
-//If player input lightning, and wizard input wall, then run lose and lose WbL description
-//If player input lightning, and wizard input lightning, then run tie and tie L description
+//If player input lightning, and wizard input circle, then run win and win Lightning beats Circle description
+//If player input lightning, and wizard input wall, then run lose and lose Wall beats Lightning description
+//If player input lightning, and wizard input lightning, then run tie and tie Lightning description
 
 //If player input circle, and wizard input wall, then run win and win CbW description.
 //If player input circle, and wizard input lightning, then run lose and lose LbC description
