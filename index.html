@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RO! SHAM! BO!</title>
   
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Bungee&family=Odibee+Sans&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Bungee&family=Odibee+Sans&display=swap" rel="stylesheet">
+
   
   <link rel="stylesheet" href="style.css" class="stylesheet">
 </head>
@@ -19,68 +21,102 @@
 
 <body>
   <!-- ANCHOR Title and hook -->
-  <div class="row">
-  <div class="col-12"><h2>In a Wizard Battle, there is no thought— only instinct! Even a small mistake means death.</h2></div>
-  <div class="col-12"><h1>Choose Wisely!</h1></div>
+  <header class="container-fluid">
+  <div class="row mx-auto py-3">
+  <div class="col-12 d-flex justify-content-center align-items-center rm-my pt-3">
+    <h2 class="font-fancy big text-center">In a Wizard Battle, there is no thinking— only instinct!</h2>
+  </div>
+  <div class="col-12 d-flex justify-content-center align-items-center pb-3">
+    <h2 class="font-fancy big text-center">Even a small mistake means death.</h2>
+  </div>
+  <div class="col-12 d-flex justify-content-center rm-px"><div class="font-big big text-center w-75">Choose Wisely!</div></div>
 </div>
+  </header>
 <main>
-
-  <!-- ANCHOR "battle" - image display -->
-  <section class="container-fluid">
-    <div class="row">
-      <!-- Insert Images -->
-      <div class="col-6">
-
-        <img id="player-image" class="img-fluid rounded" src="" alt="">
-        <div id="player-spell-name">
-
-        </div>
-
-        <img id="wizard-image" class="img-fluid rounded" src="" alt="">
-        <div id="wizard-spell-name">
-
-        </div>
-
-      </div>
-      <h1>VS</h1>
-      <!-- You cast: X  -->
-      <!-- Wizard cast: Y -->
-      <!-- You vs. Evil Wizard (static)-->
-
-    </div>
-
-    <div class="row">
-      <!-- Description -->
-      <div id="description">
-
-      </div>
-
-      <div id="win-lose-tie">
-
-      </div>
-      <!-- WIN/LOSE -->
-
-    </div>
-
-
-
-  </section>
 
   <!-- ANCHOR Button Section -->
   <section class="container-fluid">
-    <div class="row justify-content-around">
-<button onclick="play('lightning')" class="btn btn-danger btn-lg">Chain Lightning</button>
-<button onclick="play('wall')" class="btn btn-info btn-lg">Wall of Force</button>
-<button onclick="play('circle')" class="btn btn-success btn-lg">Teleportation Circle</button>
+    <div class="row justify-content-center pb-5">
+      <div class="col-4 d-flex justify-content-end"><button onclick="play('lightning')" class="btn btn-danger btn-lg">Chain Lightning</button></div>
+      <div class="col-4 d-flex justify-content-center"><button onclick="play('wall')" class="btn btn-info btn-lg">Wall of Force</button></div>
+      <div class="col-4 d-flex justify-content-start"><button onclick="play('circle')" class="btn btn-success btn-lg">Teleportation Circle</button></div>
+
 </div>
 
   </section>
+
+  <!-- ANCHOR Description and Result section -->
+    <section class="container-fluid">
+      <div class="row">
+    
+          <!-- Battle Description -->
+        <div class="col-12 d-flex justify-content-center">
+          <div class="font-fancy medium text-center" id="description"></div>
+          <div id="description-holder" class="font-fancy medium">What will happen?</div>
+        </div>
+    
+        <!-- Win/Lose/Tie -->
+        <div class="col-12 d-flex justify-content-center pb-4">
+          <div class="font-big medium" id="win-lose-tie"></div>
+          <div id="result-holder" class="font-big medium text-black-50">Result</div>
+        </div>
+    
+      </div>
+    </section>
+
+  <!-- ANCHOR "battle" - image display -->
+  <section class="container-fluid">
+    <div class="row justify-content-center">
+
+      <div class="col-md-4 col-12">
+        <div class="special-contain-img">
+          <img class="img-fluid img-border" src="player-border.png">
+          <img id="player-image" class="img-fluid img-spell-player rounded" src="" alt="">
+          <img class="img-question img-fluid rounded shadow" src="question-mark.jpg">
+        </div>
+        <div class="row font-main medium">
+          <div class="col-12 d-flex justify-content-center">You cast&nbsp;
+            <div class="font-color-player" id="player-spell-name"></div>
+            <div class="font-color-player" id="ques-one">?</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-12 d-flex justify-content-center align-items-center">
+        <div class="font-big big py-3">VS</div>
+      </div>
+        
+
+      <div class="col-md-4 col-12">
+        <div class="special-contain-img">
+          <img class="img-fluid img-border" src="wizard-border.png">
+          <img id="wizard-image" class="img-fluid img-spell-wizard rounded" src="" alt="">
+          <img class="img-fluid img-question rounded shadow" src="question-mark.jpg">
+        </div>
+        <div class="row font-main medium">
+          <div class="col-6 rm-px d-flex justify-content-end">The Enemy Wizard cast&nbsp;</div>
+            <div class="col-6 rm-px font-color-wizard" id="wizard-spell-name"></div>
+            
+          
+        </div>
+      </div>
+
+    
+    </div>
+
+
+
+
+
+  </section>
+
+
 
 </main>
 
 
 <footer>
-  <div class="row align-content-end">
+  <div class="row align-content-end pt-5">
   <div class="col-12 text-center">
     Website design and content by Grant Ignotus Brees. Art from <a href="https://dnd.wizards.com/products/tabletop-games/board-games/rock-paper-wizard">Rock, Paper, Wizard</a>, a great card game.
   </div>

@@ -1,46 +1,25 @@
 // Teleportation Circle, Chain Lightning, Wall of Force
-// Chain Lightning beats Teleportation Circle  |  LbC
-//    win description: "You electrocute the enemy wizard before they can teleport away!"
-//    lose description: "The enemy wizard sends electricity through your body before you can escape!"
-
-// Teleportation Circle beats Wall of Force  |  CbW
-//    win description: "You escaped! The enemy wizard cast a useless wall!"
-//    lose description: "The enemy wizard is escaped! You cast a Wall for no reason!"
-
-// Wall of Force beats Chain Lightning  |  WbL
-//    win description: "Your Wall blocks the enemy wizard's deadly power!"
-//    lose description: "The enemy wizard blocks your electrical magic!"
-
-// W  |  Wall of Force tie description: "You both hesitate... and both throw up Walls of Force!"
-// C  |  Teleportation Circle tie description: "You both move out of the way of... nothing!"
-// L  |  Chain Lightning tie description: "You both sling webs of lightning... that meet in the middle, sizzling into thin air!"
-
-
-// What happens when you select a spell? It should input and draw your result into the player "slot".
-// It should also generate a random (or semi random) wizard input and draw the result.
-// Then, it needs to compare the two results (player and wizard), and put into an if statement. 
-
 
 // Chain Lighting        = Rock
 // Wall of Force         = Paper
 // Teleportation Circle  = Scissors
 
-//#region ANCHOR moveSet - spell and spellResults
+//ANCHOR moveSet - spell and spellResults
 let moveSet = {
   spells: [
     {
       img: "lightning.jpg",
-      name: "Chain Lightning",
+      name: "Chain Lightning!",
       inputName: "lightning"
   },
     {
       img: "circle.jpg",
-      name: "Teleportation Circle",
+      name: "Teleportation Circle!",
       inputName: "circle"
     },
       {
         img: "wall.jpg",
-        name: "Wall of Force",
+        name: "Wall of Force!",
         inputName: "wall"
       }
     ],
@@ -88,7 +67,6 @@ let moveSet = {
   ]
 
 }
-//#endregion
 
 
 
@@ -121,10 +99,13 @@ function drawBattle(){
 }
 
 
-  // TODO make a loadEmpty function
-// Sets empty place holders for the opening page, before you've clicked.
-function loadEmpty(){
 
+// Hides the placeholder text
+function textHider(){
+  document.getElementById("description-holder").classList.add("hidden")
+  document.getElementById("result-holder").classList.add("hidden")
+  document.getElementById("ques-one").classList.add("hidden")
+  document.getElementById("ques-two").classList.add("hidden")
 }
 
 function generateWizardSpell(){
@@ -148,6 +129,8 @@ function generateWizardSpell(){
 //#endregion
 
 function play(inputSpell){
+  textHider()
+
   //generate a wizard spell and give it a variable name for reference in the if statements
   let wizardSpell = generateWizardSpell()
   window.localStorage.setItem("playerSpellName", inputSpell)
@@ -230,10 +213,7 @@ function play(inputSpell){
 
 
 
-
-
-
-// #region NOTE Addons
+// #region NOTE Future Addons
 // Addons: Make a counter for the win/lose/tie count
 // Addons: Make a countdown timer where the wizard strikes you down if you don't act quickly enough
 // Addons: Make a little spell magic image between each battle

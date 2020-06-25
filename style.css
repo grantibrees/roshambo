@@ -1,15 +1,89 @@
+
 body{
   font-family: 'Odibee Sans', cursive;
 }
 
-h1{
+.font-big{
   font-family: 'Bungee', cursive;
 }
-
-
-h2{
-  font-family: 'Berkshire Swash', cursive;
+.font-big.big{
+  font-size: 6vh;
+  
+}
+.font-big.medium{
+  font-size: 3.5vh;
+  
 }
 
 
+.font-fancy{
+  font-family: 'Berkshire Swash', cursive;
+}
+.font-fancy.big{
+  font-size: 4vh;
+}
+.font-fancy.medium{
+  font-size: 3vh;
+}
+
+.font-main{
+  font-family: 'Odibee Sans', cursive;
+}
+.font-main.medium{
+  font-size: 3vh;
+}
+
+.font-color-player{
+  color: #c6a75f;
+}
+
+.font-color-wizard{
+  color: #784a7a;
+}
+
+.rm-my{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.rm-px{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.special-contain-img{
+  position: relative;
+}
+
+.img-border{
+  position: relative; 
+  left: 0; 
+  top: 0;
+  z-index: 1;
+}
+.img-question{
+  position: absolute; 
+  left: 0; 
+  top: 0;
+  z-index: -1;
+}
+
+.img-spell-player{
+  position: absolute; 
+  left: 0; 
+  top: 0;
+  z-index: 0;
+  transform: scaleX(-1);
+}
+
+.img-spell-wizard{
+  position: absolute; 
+  left: 0; 
+  top: 0;
+  z-index: 0;
+}
+
+.hidden{
+  display: none !important;
+}
 
