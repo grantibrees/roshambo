@@ -51,6 +51,15 @@ body{
   padding-right: 0px;
 }
 
+.btn-color{
+  background-color: #c6a75f;
+  color: white;
+}
+.btn-color:hover {
+  background-color: #dbd7c5;
+  color: black;
+}
+
 .special-contain-img{
   position: relative;
 }

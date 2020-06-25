@@ -104,8 +104,13 @@ function drawBattle(){
 function textHider(){
   document.getElementById("description-holder").classList.add("hidden")
   document.getElementById("result-holder").classList.add("hidden")
+  document.getElementById("ques-one").classList.remove("col-auto")
   document.getElementById("ques-one").classList.add("hidden")
+  document.getElementById("ques-two").classList.remove("col-auto")
   document.getElementById("ques-two").classList.add("hidden")
+  document.getElementById("player-spell-name").classList.add("col-auto")
+  document.getElementById("wizard-spell-name").classList.add("col-auto")
+  
 }
 
 function generateWizardSpell(){

@@ -22,31 +22,31 @@
 <body>
   <!-- ANCHOR Title and hook -->
   <header class="container-fluid">
-  <div class="row mx-auto py-3">
-  <div class="col-12 d-flex justify-content-center align-items-center rm-my pt-3">
+  <div class="row mx-auto py-2">
+  <div class="col-12 d-flex justify-content-center align-items-center rm-my pt-2">
     <h2 class="font-fancy big text-center">In a Wizard Battle, there is no thinking— only instinct!</h2>
   </div>
-  <div class="col-12 d-flex justify-content-center align-items-center pb-3">
+  <div class="col-12 d-flex justify-content-center align-items-center pb-2">
     <h2 class="font-fancy big text-center">Even a small mistake means death.</h2>
   </div>
-  <div class="col-12 d-flex justify-content-center rm-px"><div class="font-big big text-center w-75">Choose Wisely!</div></div>
+  <div class="col-12 d-flex justify-content-center rm-px"><div class="font-big big text-center">Choose Wisely!</div></div>
 </div>
   </header>
-<main>
+<main class="">
 
   <!-- ANCHOR Button Section -->
-  <section class="container-fluid">
-    <div class="row justify-content-center pb-5">
-      <div class="col-4 d-flex justify-content-end"><button onclick="play('lightning')" class="btn btn-danger btn-lg">Chain Lightning</button></div>
-      <div class="col-4 d-flex justify-content-center"><button onclick="play('wall')" class="btn btn-info btn-lg">Wall of Force</button></div>
-      <div class="col-4 d-flex justify-content-start"><button onclick="play('circle')" class="btn btn-success btn-lg">Teleportation Circle</button></div>
+  <section class="container-fluid order-md-1 order-2">
+    <div class="row justify-content-center pb-2">
+      <div class="col-4 d-flex justify-content-end"><button onclick="play('lightning')" class="btn btn-danger btn-color btn-lg">Chain Lightning</button></div>
+      <div class="col-4 d-flex justify-content-center"><button onclick="play('wall')" class="btn btn-info btn-color btn-lg">Wall of Force</button></div>
+      <div class="col-4 d-flex justify-content-start"><button onclick="play('circle')" class="btn btn-success btn-color btn-lg">Teleportation Circle</button></div>
 
 </div>
 
   </section>
 
   <!-- ANCHOR Description and Result section -->
-    <section class="container-fluid">
+    <section class="container-fluid order-md-2 order-1">
       <div class="row">
     
           <!-- Battle Description -->
@@ -57,7 +57,7 @@
     
         <!-- Win/Lose/Tie -->
         <div class="col-12 d-flex justify-content-center pb-4">
-          <div class="font-big medium" id="win-lose-tie"></div>
+          <div class="font-big medium text-danger" id="win-lose-tie"></div>
           <div id="result-holder" class="font-big medium text-black-50">Result</div>
         </div>
     
@@ -65,7 +65,7 @@
     </section>
 
   <!-- ANCHOR "battle" - image display -->
-  <section class="container-fluid">
+  <section class="container-fluid order-md-3 order-3">
     <div class="row justify-content-center">
 
       <div class="col-md-4 col-12">
@@ -74,16 +74,17 @@
           <img id="player-image" class="img-fluid img-spell-player rounded" src="" alt="">
           <img class="img-question img-fluid rounded shadow" src="question-mark.jpg">
         </div>
-        <div class="row font-main medium">
-          <div class="col-12 d-flex justify-content-center">You cast&nbsp;
-            <div class="font-color-player" id="player-spell-name"></div>
-            <div class="font-color-player" id="ques-one">?</div>
-          </div>
+
+        <div class="row font-main medium d-flex justify-content-center">
+          <div class="col-auto rm-px d-flex justify-content-end">You cast&nbsp;</div>
+            <div class="rm-px font-color-player rm-px" id="player-spell-name"></div>
+            <div class="col-auto font-color-player rm-px" id="ques-one">?</div>
         </div>
+
       </div>
 
-      <div class="col-md-2 col-12 d-flex justify-content-center align-items-center">
-        <div class="font-big big py-3">VS</div>
+      <div class="col-md-2 col-12 d-flex justify-content-center align-items-center py-2">
+        <div class="font-big big py-3 d-none d-md-block d-lg-block d-xl-block">VS</div>
       </div>
         
 
@@ -93,9 +94,10 @@
           <img id="wizard-image" class="img-fluid img-spell-wizard rounded" src="" alt="">
           <img class="img-fluid img-question rounded shadow" src="question-mark.jpg">
         </div>
-        <div class="row font-main medium">
-          <div class="col-6 rm-px d-flex justify-content-end">The Enemy Wizard cast&nbsp;</div>
-            <div class="col-6 rm-px font-color-wizard" id="wizard-spell-name"></div>
+        <div class="row font-main medium d-flex justify-content-center">
+          <div class="col-auto rm-px d-flex justify-content-end">The Enemy Wizard cast&nbsp;</div>
+            <div class="rm-px font-color-wizard rm-px" id="wizard-spell-name"></div>
+            <div class="col-auto font-color-wizard rm-px" id="ques-two">?</div>
             
           
         </div>
